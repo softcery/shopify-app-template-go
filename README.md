@@ -34,7 +34,7 @@ docker-compose --env-file .local.env up --build postgresdb
 
 This will start a new Postgres container using the configuration in the **`.local.env`** file.
 
-### 3**. Start the Template**
+### **3. Start the Template**
 
 To start the template, navigate to the root directory of the template and run the following command:
 
