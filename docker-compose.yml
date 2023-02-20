@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: local.Dockerfile
+    environment:
+      - POSTGRESQL_HOST=${POSTGRESQL_HOST}
+      - POSTGRESQL_USER=${POSTGRESQL_USER}
+      - POSTGRESQL_PASSWORD=${POSTGRESQL_PASSWORD}
+      - POSTGRESQL_DATABASE=${POSTGRESQL_DATABASE}
+    ports:
+      - 8082:8082
+  postgresdb:
+    image: postgres:14.4-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=api
+    volumes:
+      - postgresGD:/var/lib/postgresql/data
+      - ./local-run/init-postgresdb/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - 5432:5432
+volumes:
+  api:
+  postgresGD:
+    driver: local
