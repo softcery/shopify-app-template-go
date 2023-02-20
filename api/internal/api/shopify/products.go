@@ -9,7 +9,11 @@ import (
 	"github.com/softcery/shopify-app-template-go/internal/service"
 )
 
-type Product struct {
+type createProductRequestBody struct {
+	Product *product `json:"product"`
+}
+
+type product struct {
 	Title       string `json:"title"`
 	BodyHTML    string `json:"body_html"`
 	Vendor      string `json:"vendor"`
@@ -24,12 +28,14 @@ func (s *shopifyAPI) CreateProducts(ctx context.Context) error {
 
 	for i := 0; i < service.DEFAULT_PRODUCT_COUNT; i++ {
 		title := generateRandomProductTitle()
-		product := &Product{
-			Title:       title,
-			BodyHTML:    fmt.Sprintf("<p>Product %s</p>", title),
-			Vendor:      "Vendor",
-			ProductType: "Type",
-			Status:      "active",
+		product := &createProductRequestBody{
+			Product: &product{
+				Title:       title,
+				BodyHTML:    fmt.Sprintf("<p>Product %s</p>", title),
+				Vendor:      "Vendor",
+				ProductType: "Type",
+				Status:      "active",
+			},
 		}
 		res, err := s.client.R().
 			SetBody(product).

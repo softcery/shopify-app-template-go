@@ -145,11 +145,29 @@ func (r *platformRoutes) uninstallHandler(c *gin.Context) (interface{}, *httpErr
 	return nil, nil
 }
 
+type getProductsCountResponse struct {
+	Count int `json:"count"`
+}
+
 func (r *platformRoutes) getProductsCount(c *gin.Context) (interface{}, *httpErr) {
 	logger := r.logger.Named("getProductsCount")
 
+	c.Set("Authorization", c.Request.Header.Get("Authorization"))
+
+	count, err := r.services.Platform.GetProductsCount(c)
+	if err != nil {
+		// TODO: return custom errors to client, instead of 500
+		logger.Error("failed to create products", "err", err)
+		return nil, &httpErr{
+			Type:    ErrorTypeServer,
+			Message: "failed to create products",
+			Details: err,
+		}
+	}
+	logger = logger.With("count", count)
+
 	logger.Info("successfully got products count")
-	return "", nil
+	return getProductsCountResponse{Count: count}, nil
 }
 
 func (r *platformRoutes) createProducts(c *gin.Context) (interface{}, *httpErr) {
