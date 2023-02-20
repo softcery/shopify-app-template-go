@@ -1,4 +1,4 @@
 type="backend"
 
 [commands]
-dev = "sh run.sh"
+dev = "go run cmd/main.go"
