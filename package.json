@@ -1,0 +1,28 @@
+{
+  "name": "shopify-app-template-go",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softcery/shopify-app-template-go.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/softcery/shopify-app-template-go/issues"
+  },
+  "homepage": "https://github.com/softcery/shopify-app-template-go#readme",
+  "dependencies": {
+    "@shopify/app": "^3.41.0",
+    "@shopify/cli": "^3.41.0"
+  }
+}
