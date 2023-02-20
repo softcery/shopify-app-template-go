@@ -47,8 +47,7 @@ func (s *platformService) Handle(ctx context.Context, storeName, installationURL
 
 	if store != nil && store.Installed {
 		logger.Info("store is already installed")
-		// Redirect to app page
-		return fmt.Sprintf("https://%s/admin/apps/%s", storeName, s.config.Shopify.ApiKey), nil
+		return fmt.Sprintf("https://%s/admin/apps/%s/exit-iframe", storeName, s.config.Shopify.ApiKey), nil
 	}
 
 	res, err := s.apis.Platform.HandleInstall(HandleInstallOptions{
