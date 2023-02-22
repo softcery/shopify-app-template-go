@@ -1,7 +1,6 @@
 package service
 
 import (
-	// external
 	"context"
 
 	"github.com/softcery/shopify-app-template-go/internal/entity"

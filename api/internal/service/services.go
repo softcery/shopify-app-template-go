@@ -3,7 +3,6 @@ package service
 import (
 	"context"
 
-	// external
 	"github.com/softcery/shopify-app-template-go/config"
 	"github.com/softcery/shopify-app-template-go/pkg/errs"
 	"github.com/softcery/shopify-app-template-go/pkg/logging"

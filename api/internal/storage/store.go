@@ -5,15 +5,10 @@ import (
 	"errors"
 	"fmt"
 
-	// third-party
-	"gorm.io/gorm"
-
-	// external
-	"github.com/softcery/shopify-app-template-go/pkg/database"
-
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/entity"
 	"github.com/softcery/shopify-app-template-go/internal/service"
+	"github.com/softcery/shopify-app-template-go/pkg/database"
+	"gorm.io/gorm"
 )
 
 type storeStorage struct {

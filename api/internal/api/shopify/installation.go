@@ -5,10 +5,7 @@ import (
 	"net/http"
 	"net/url"
 
-	// third-party
 	"github.com/google/uuid"
-
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/service"
 )
 

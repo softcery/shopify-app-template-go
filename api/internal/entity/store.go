@@ -1,7 +1,6 @@
 package entity
 
 import (
-	// external
 	"github.com/softcery/shopify-app-template-go/pkg/database"
 )
 

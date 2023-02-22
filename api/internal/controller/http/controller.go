@@ -6,16 +6,11 @@ import (
 	"net/http"
 	"runtime/debug"
 
-	// third-party
 	"github.com/DataDog/gostackparse"
 	"github.com/gin-gonic/gin"
-
-	// external
 	"github.com/softcery/shopify-app-template-go/config"
-	"github.com/softcery/shopify-app-template-go/pkg/logging"
-
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/service"
+	"github.com/softcery/shopify-app-template-go/pkg/logging"
 )
 
 // Options is used to create HTTP controller.
