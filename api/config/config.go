@@ -17,7 +17,7 @@ type (
 	}
 
 	App struct {
-		Name    string `env:"APP_NAME" nv-default:"app-api"`
+		Name    string `env:"APP_NAME" env-default:"app-api"`
 		Version string `env:"APP_VERSION" env-default:"1.0.0"`
 		BaseURL string `env:"HOST" env-default:"localhost"`
 	}
