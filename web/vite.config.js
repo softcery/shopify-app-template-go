@@ -62,7 +62,6 @@ export default defineConfig({
         secure: true,
         ws: false,
       },
-      "^/(\\?.*)?$": proxyOptions,
       "^/api(/|(\\?.*)?$)": proxyOptions,
     },
   },
