@@ -5,7 +5,6 @@ import (
 	"os"
 	"strings"
 
-	// third-party
 	zapLib "go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

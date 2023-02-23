@@ -3,7 +3,6 @@ package database
 import (
 	"time"
 
-	// third-party
 	"gorm.io/gorm"
 )
 

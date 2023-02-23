@@ -6,21 +6,16 @@ import (
 	"syscall"
 	"time"
 
-	// third-party
 	"github.com/gin-gonic/gin"
-
-	// external
 	"github.com/softcery/shopify-app-template-go/config"
-	"github.com/softcery/shopify-app-template-go/pkg/database"
-	"github.com/softcery/shopify-app-template-go/pkg/httpserver"
-	"github.com/softcery/shopify-app-template-go/pkg/logging"
-
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/api/shopify"
 	httpcontroller "github.com/softcery/shopify-app-template-go/internal/controller/http"
 	"github.com/softcery/shopify-app-template-go/internal/entity"
 	"github.com/softcery/shopify-app-template-go/internal/service"
 	"github.com/softcery/shopify-app-template-go/internal/storage"
+	"github.com/softcery/shopify-app-template-go/pkg/database"
+	"github.com/softcery/shopify-app-template-go/pkg/httpserver"
+	"github.com/softcery/shopify-app-template-go/pkg/logging"
 )
 
 func Run(cfg *config.Config) {

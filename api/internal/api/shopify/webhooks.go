@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/service"
 )
 

@@ -1,21 +1,16 @@
 package shopify
 
 import (
-	// third-party
 	"context"
 	"fmt"
 	"time"
 
 	"github.com/go-resty/resty/v2"
 	"github.com/hashicorp/go-retryablehttp"
-
-	// external
 	"github.com/softcery/shopify-app-template-go/config"
-	"github.com/softcery/shopify-app-template-go/pkg/logging"
-
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/entity"
 	"github.com/softcery/shopify-app-template-go/internal/service"
+	"github.com/softcery/shopify-app-template-go/pkg/logging"
 )
 
 type Options struct {

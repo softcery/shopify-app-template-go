@@ -4,14 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	// third-party
 	"github.com/gin-gonic/gin"
-
-	// external
-	"github.com/softcery/shopify-app-template-go/pkg/errs"
-
-	// internal
 	"github.com/softcery/shopify-app-template-go/internal/service"
+	"github.com/softcery/shopify-app-template-go/pkg/errs"
 )
 
 type platformRoutes struct {
