@@ -31,7 +31,7 @@ func NewPlatformService(opts *Options) *platformService {
 }
 
 func (s *platformService) Handle(ctx context.Context, storeName, installationURL string) (string, error) {
-	logger := s.logger.Named("Handle").With("ctx", ctx)
+	logger := s.logger.Named("Handle").WithContext(ctx)
 
 	// Check if store is not already installed
 	store, err := s.storages.Store.Get(ctx, storeName)
@@ -175,7 +175,7 @@ func (s *platformService) HandleUninstall(ctx context.Context, storeName string)
 }
 
 func (s *platformService) CreateProducts(ctx context.Context) error {
-	logger := s.logger.Named("CreateProducts").With("ctx", ctx)
+	logger := s.logger.Named("CreateProducts").WithContext(ctx)
 
 	output, err := s.apis.Platform.VerifySession(ctx)
 	if err != nil {
@@ -203,7 +203,7 @@ func (s *platformService) CreateProducts(ctx context.Context) error {
 }
 
 func (s *platformService) GetProductsCount(ctx context.Context) (int, error) {
-	logger := s.logger.Named("GetProductsCount").With("ctx", ctx)
+	logger := s.logger.Named("GetProductsCount").WithContext(ctx)
 
 	output, err := s.apis.Platform.VerifySession(ctx)
 	if err != nil {
