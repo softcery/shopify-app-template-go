@@ -1,47 +1,43 @@
-# **Template Usage Guide**
+## Template description
 
-This guide will walk you through the steps required to start using the Softcery Shopify App Template.
+This is a Shopify app template written in Golang, that bootstraps the app building process. It includes:
 
-## **Prerequisites**
+- The setup of the client and server parts, built on top of the App Bridge.
+- Shopify app installation logic.
+- Examples of using the Shopify API include creating store products and counting the number of products.
 
-Before you can use the template, you will need the following software installed on your computer:
+## Template usage
 
-- Node.js
-- Golang
-- Docker
+### Prerequisites
 
-## **Getting Started**
+Please ensure that the following software is installed on your computer:
 
-To get started with the template, follow these steps:
+- [Node.js](https://nodejs.org/)
+- [Golang](https://go.dev/)
+- [Docker](https://www.docker.com/)
 
-### **1. Clone the Template**
+### Getting started
 
-To clone the template, run the following command in your terminal:
-
-```
-npx @softcerycom/shopify-app-template-go-init@latest
-```
-
-This will create a new directory with the template files in the current directory.
-
-### **2. Start the Database**
-
-The Softcery Shopify App Template Go Init uses Postgres for data storage. To start the database, navigate to the root directory of the template and run the following command:
-
-```
-docker-compose --env-file .local.env up --build postgresdb
-```
-
-This will start a new Postgres container using the configuration in the **`.local.env`** file.
-
-### **3. Start the Template**
-
-To start the template, navigate to the root directory of the template and run the following command:
-
-```
-npm run dev
-```
-
-## **Conclusion**
-
-You should now have a working instance of the Shopify App in Go. You can start modifying the template to build your own Shopify app!
+1. Clone the template using the following terminal command:
+    
+    ```
+    npx @softcerycom/shopify-app-template-go-init@latest && cd softcery-shopify-app-template-go
+    ```
+    
+2. Install NPM dependencies:
+    
+    ```
+    npm i    
+    ```
+    
+3. Start the database (Postgres is used by default). The following command will start a new Postgres container using the configuration in the **`.local.env`** file:
+    
+    ```
+    docker-compose --env-file .local.env up --build postgresdb
+    ```
+    
+4. Run the project:
+    
+    ```
+    npm run dev
+    ```
