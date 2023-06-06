@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/softcery/shopify-app-template-go#readme",
   "dependencies": {
-    "@shopify/app": "^3.41.0",
-    "@shopify/cli": "^3.41.0"
+    "@shopify/app": "^3.46.2",
+    "@shopify/cli": "^3.46.2"
   }
 }
