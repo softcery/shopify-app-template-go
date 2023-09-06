@@ -95,7 +95,7 @@ func (s *shopifyAPI) verifySessionToken(tokenString string) (string, error) {
 	}
 
 	// Verify the nbf value
-	if claims.NotBefore >= now {
+	if claims.NotBefore > now {
 		return "", errors.New("JWT token not yet valid")
 	}
 
